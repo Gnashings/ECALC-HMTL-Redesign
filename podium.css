@@ -1,6 +1,7 @@
 @import url("quiz.css");
 @import url("standardDrink.css");
 @import url("alcoholUnmasked.css");
+@import url("adDeconstruction.css");
 
 html{
   height: 100%;
@@ -79,7 +80,6 @@ body {
   color: white;
 }
 
-
 .logoIMG{
   -webkit-filter: drop-shadow(15px 15px #222222);
   filter: drop-shadow(15px 15px #222222);
@@ -93,6 +93,23 @@ body {
   font-size: 8em;
   text-shadow: 4px 4px black;
 }
+
+.buttonIMG{
+  -webkit-filter: drop-shadow(15px 15px #222222);
+  filter: drop-shadow(5px 5px #222222);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.simpleImg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 
 .soloCup{
   display: block;
@@ -228,9 +245,32 @@ body {
   height: 100%;
 }
 
+.paperBackground {
+  background: url(images/PaperBackdrop.png) center no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+
+
 .tealBackground {
   background: url(images/TealBackdrop.png) center no-repeat;
-  background-size: contain;
+  background-size: 80% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+
+.greenBackground {
+  background: url(images/GreenBackdrop.png) center no-repeat;
+  background-size: 80% 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

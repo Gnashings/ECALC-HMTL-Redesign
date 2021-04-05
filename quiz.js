@@ -1,4 +1,7 @@
 
+const questionAudio1 = new Audio("Audio/FactOrMyth1.mp3");
+const questionAudio2 = new Audio("Audio/FactOrMyth2.mp3");
+const questionAudio3 = new Audio("Audio/FactOrMyth3.mp3");
 var QuizQuestion = [
   {
     showButtons: true,
@@ -6,6 +9,7 @@ var QuizQuestion = [
     showExplanation: false,
     isAnswered: false,
     isCorrect: null,
+    audioLog: questionAudio1,
     correctText: "Correct! This is a fact.",
     incorrectText: "Incorrect! This is a fact.",
     questionText: "A person's level of intoxication (or drunkenness) is impacted by how much they weigh.",
@@ -17,6 +21,7 @@ var QuizQuestion = [
     showExplanation: false,
     isAnswered: false,
     isCorrect: null,
+    audioLog: questionAudio2,
     correctText: "Correct! This is a myth.",
     incorrectText: "Incorrect! This is a myth.",
     questionText: "If a male and female are the same height and weight and drink the same amount of alcohol, they would have similar levels of intoxication.",
@@ -28,6 +33,7 @@ var QuizQuestion = [
     showExplanation: false,
     isAnswered: false,
     isCorrect: null,
+    audioLog: questionAudio3,
     correctText: "Correct! This is a myth.",
     incorrectText: "Incorrect! This is a myth.",
     questionText: "Drinking a cup of coffee, taking a cold shower, eating bread, or drinking lots of water will sober someone up when they are drunk.",
@@ -42,6 +48,8 @@ var totalUnanswered = 3;
 var MaxQuestionIndex = 2; // total amount of quiz questions, minus one. 
 var currentQuestionIndex = 0; // what question to load
 
+
+
 const fact = document.getElementById('fact');
 const myth = document.getElementById('myth');
 const reset = document.getElementById('reset');
@@ -55,6 +63,7 @@ function LoadQuestion(){
   if (QuizQuestion[currentQuestionIndex].isAnswered == true){
     if(QuizQuestion[currentQuestionIndex].isCorrect == true){
     }
+    playSound(QuizQuestion[currentQuestionIndex].audioLog);
     DisableButtons();
   }
   else
@@ -70,7 +79,6 @@ function debugQuestionData(x){
   console.log(QuizQuestion[x].correctAnswer);
   console.log(QuizQuestion[x].showExplanation);
   console.log(QuizQuestion[x].isAnswered);
-
 }
 
 function UpdateButtonAppearance(){
@@ -131,9 +139,11 @@ function checkAnswer(answer){
 
 // checks if the button pressed was the right one
 function isAnswerFact(){
+  playSound(QuizQuestion[currentQuestionIndex].audioLog);
   checkAnswer(true);
 }
 function isAnswerMyth(){
+  playSound(QuizQuestion[currentQuestionIndex].audioLog);
   checkAnswer(false);
 }
 
@@ -165,7 +175,7 @@ function UpdateExplanation() {
 function NextQuestion() {
   if (currentQuestionIndex == MaxQuestionIndex)
   {
-    //ensures that 
+    stopSound(QuizQuestion[currentQuestionIndex].audioLog);
     currentQuestionIndex = 3;
     LoadResults();
     return;
@@ -174,6 +184,7 @@ function NextQuestion() {
   {
     currentQuestionIndex++;
     console.log(currentQuestionIndex);
+    stopSound(QuizQuestion[currentQuestionIndex].audioLog);
     LoadQuestion();
   }
 }
@@ -193,6 +204,7 @@ function PrevQuestion(){
     console.log(currentQuestionIndex);
     fact.style.visibility = 'visible';
     myth.style.visibility = 'visible';
+    stopSound(QuizQuestion[currentQuestionIndex].audioLog);
     LoadQuestion();
   }
 }
@@ -219,4 +231,17 @@ function EnableButtons(){
 
 function ResetQuiz(){
   location.reload();
+}
+
+var audio;
+function playSound(sound){
+  //const audio = new Audio("Audio/FactOrMyth1.mp3");
+  audio = sound;
+  audio.play();
+}
+
+function stopSound(sound){
+  // = sound;
+  audio.pause();
+  audio.currentTime = 0;
 }
