@@ -266,6 +266,7 @@ body {
   align-items: center;
   align-content: center;
   height: 100%;
+  z-index: -1;
 }
 
 .greenBackground {

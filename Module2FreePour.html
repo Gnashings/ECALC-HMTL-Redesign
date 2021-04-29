@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="podium.css">
+<link rel="stylesheet" href="freepour.css">
 <script src="podium.js"></script>
 
 </head>
@@ -18,13 +19,23 @@
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
     </div>
     <div class="whiteboard">
-      <div class="emptybackground">
+      <div class="tealBackground">
         <div class = "content">
-          <h1>Module 2: The Standard Drink</h1>
-          <li>THE STANDARD DRINK.</li>
-          <li>FREE POUR!</li>
-          <li>THE STANDARD DRINK IN A SOLO CUP</li>
-          <li>NON-STANDARD CONTAINERS</li>
+          <h1>Free Pour!</h1>
+
+          <div class = 'cup'>
+            <div class = 'solo'>
+              <div class="masked"></div>
+              <img src="images/solocup.png" class = 'soloImg' height="100%">
+
+            </div>
+            <div class = 'filler' id = 'filler'>
+              <img src="images/beer.png" class = 'maskImg' height="100%">
+            </div>
+          </div>
+          <button id = 'sansa' onclick='wah()'>hit me</button>
+          <button id = 'skunt' onclick='shove()'>WEEEEEEEEEEEEEE</button>
+
         </div>
       </div>
     </div>
@@ -34,7 +45,7 @@
             <br>
             Back
         </form>
-        <form action="Module2FreePour.html">
+        <form action="Module2TheStandardDrinkGame.html">
             <input type="submit" value="" class="fwdbtn" />
             <br>
             Next
@@ -47,6 +58,6 @@
 <script>
   includeHTML();
 </script>
-
+<script src="freepour.js"></script>
 </body>
 </html> 

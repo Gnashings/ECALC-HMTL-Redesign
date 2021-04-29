@@ -1,0 +1,110 @@
+.cup {
+    height: 300px;
+    max-width: 100%;
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.filler {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    transition: 1s;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    z-index: 0;
+}
+
+.fillerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.solo {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+
+}
+
+.soloImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+
+
+}
+
+.masked {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-mask-image: url(images/soloLayerMask.png);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-mode: alpha;
+    background-image: url(images/TealBackdrop.png);
+    z-index: 2;
+
+}
+
+.maskImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.slappa {
+    background-image: url(images/beer.png);
+    background-repeat: no-repeat;
+    background-attachment: local;
+    /*background-position:center bottom;
+    background-attachment: fixed;
+    animation-play-state: paused;*/
+
+  }
+
+
+  @keyframes animatedBackground {
+    from {
+        background-position: bottom 0px;
+    }
+    to {
+        background-position: center 50%;
+    }
+  }
+  @keyframes animatedBackgroundTwo {
+    from {
+        background-position: center 50%;
+    }
+    to {
+        background-position: center 1%;
+    }
+  }
+  @keyframes animatedBackgroundThree {
+    from {
+        background-position: center 0%;
+    }
+    to {
+        background-position: center 100%;
+    }
+  }
+
+
