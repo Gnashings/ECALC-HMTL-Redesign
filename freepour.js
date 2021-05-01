@@ -66,7 +66,7 @@ function wah() {
     var move = document.getElementById('animable');
     var position = window.getComputedStyle(move).getPropertyValue("background-position");
     document.getElementById("animable").style.backgroundPosition = "0% 0%";
-    var skunt = move.style.backgroundPosition;
+    var mar = move.style.backgroundPosition;
     console.log(position);
     console.log(move);
 
