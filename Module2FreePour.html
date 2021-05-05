@@ -19,22 +19,69 @@
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
     </div>
     <div class="whiteboard">
-      <div class="tealBackground">
+      <div class="blueBackground">
         <div class = "content">
-          <h1>Free Pour!</h1>
+          <div class="pour-container">
 
-          <div class = 'cup'>
-            <div class = 'solo'>
-              <div class="masked"></div>
-              <img src="images/solocup.png" class = 'soloImg' height="100%">
+            <div class="solo-cup">
 
+              <div class = 'solo'>
+                <img src="images/solocup.png" class = 'soloImg'>
+              </div>
             </div>
-            <div class = 'filler' id = 'filler'>
-              <img src="images/beer.png" class = 'maskImg' height="100%">
+
+            <div class="pour-header">
+              <h1>Free Pour!</h1>
+            </div>
+
+            <div class="choose-drink-text">
+              <h3>Choose your drink</h3>
+            </div>
+
+            <div class="drink-select">
+              <!--<div><button id = 'Malt' class="malt-select" onclick='Swap(this.id)'></button></div>-->
+              <div class="tooltip">
+                <img class = 'drink-img' id = 'Malt' onclick="Swap(this.id)" src='images/BottleMalt.png'>
+                <span class="tooltiptext">
+                    <p class = 'description'>Malt</p>
+                </span>
+              </div> 
+              <div class="tooltip">
+                <img class = 'drink-img' id = 'Wine' onclick="Swap(this.id)" src='images/BottleWine.png'>
+                <span class="tooltiptext">
+                    <p class = 'description'>Wine</p>
+                </span>
+              </div> 
+              <div class="tooltip">
+                <img class = 'drink-img' id = 'Liquor' onclick="Swap(this.id)" src='images/BottleLiquor.png'>
+                <span class="tooltiptext">
+                    <p class = 'description'>Liquor</p>
+                </span>
+              </div>
+              <div class="tooltip">
+                <img class = 'drink-img' id = 'Beer' onclick="Swap(this.id)" src='images/BottleBeer.png'>
+                <span class="tooltiptext">
+                    <p class = 'description'>Beer</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="drink-controls">
+              <div><button class="btn-down" onclick='MoveDown()'></button></div>
+              <div><button class="btn-up"  onclick='MoveUp()'></button></div>
+              <div><button class="btn-up" onclick='CheckAnswer()'></button></div>
+            </div>
+
+            <div class="masked"></div>
+
+            <div class = 'correct-answer' id = 'correct-answer'>
+              <span><button class = 'correct-bar'></button></span><span id='correct-text'> Standard Drink: Beer</span>
+            </div>
+
+            <div class="filler" id= 'filler'>
+                <img id = 'filler-image' src="images/Beer.png" class = 'maskImg'>
             </div>
           </div>
-          <button id = 'sansa' onclick='MoveDown()'>Up</button>
-          <button id = 'stunt' onclick='MoveUp()'>Down</button>
 
         </div>
       </div>

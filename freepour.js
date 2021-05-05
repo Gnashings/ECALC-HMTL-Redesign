@@ -1,111 +1,130 @@
 var move = document.getElementById('filler');
 var position = parseInt(move.style.marginBottom + 0);
+var positionOne = 25;
+var positionTwo = 45;
+var positionThree = 60;
+var positionFour = 80; 
+var positionFive = 95;
+var positionSix = 105;
+var positionSeven = 120;
 
 function MoveUp() {
-    console.log("START " + position);
-    /*
-    if (position >= 100)
-    {
-        position = 0;
-        move.style.marginBottom = position + "%"
-        return;
-    }
-    */
-
     if (position == 0)
     {
-        position += 10;
-        console.log("first rung " + position);
+        position = positionOne;
     }
-    else if (position == 10)
+    else if (position == positionOne)
     {
-        position += 10;
-        console.log("second rung " + position);
+        position = positionTwo;
     }
-    else if (position == 20)
+    else if (position == positionTwo)
     {
-        position += 13;
-        console.log("third rung " + position);
+        position = positionThree;
     }
-    else if (position == 33)
+    else if (position == positionThree)
     {
-        position += 17;
-        console.log("fourth rung " + position);
+        position = positionFour;
     }
-    else if (position == 50)
+    else if (position == positionFour)
     {
-        position += 15;
-        console.log("fifth rung " + position);
+        position = positionFive;
     }
-    else if (position == 65)
+    else if (position == positionFive)
     {
-        position += 10;
-        console.log("sixth rung " + position);
+        position = positionSix;
     }
-    else if (position == 75)
+    else if (position == positionSix)
     {
-        position += 10;
-        console.log("seventh rung " + position);
+        position = positionSeven;
     }
 
-    console.log("END " + position);
-    move.style.marginBottom = position + "%"
+    //console.log("END " + position);
+    move.style.marginBottom = position + "%";
     
 }
 
-function reset() {
+function Swap(clicked_id) {
+    var drinkImage = document.getElementById("filler-image");
+    Reset();
+    drinkImage.src = 'images/'+ clicked_id + '.png';
+}
+
+function Reset() {
+    position = 0;
     move.style.marginBottom = "0%";
 }
+
+
 
 function MoveDown() {
     if (position == 0)
     {
-        position -= 10;
-        console.log("first rung " + position);
+        position = 0;
     }
-    else if (position == 10)
+    else if (position == positionOne)
     {
-        position -= 10;
-        console.log("second rung " + position);
+        position = 0;
     }
-    else if (position == 20)
+    else if (position == positionTwo)
     {
-        position -= 13;
-        console.log("third rung " + position);
+        position = positionOne;
     }
-    else if (position == 33)
+    else if (position == positionThree)
     {
-        position -= 17;
-        console.log("fourth rung " + position);
+        position = positionTwo;
     }
-    else if (position == 50)
+    else if (position == positionFour)
     {
-        position -= 15;
-        console.log("fifth rung " + position);
+        position = positionThree;
     }
-    else if (position == 65)
+    else if (position == positionFive)
     {
-        position -= 10;
-        console.log("sixth rung " + position);
+        position = positionFour;
     }
-    else if (position == 75)
+    else if (position == positionSix)
     {
-        position -= 10;
-        console.log("seventh rung " + position);
+        position = positionFive;
     }
+    else if (position == positionSeven)
+    {
+        position = positionSix;
+    }
+    //console.log("END " + position);
+    move.style.marginBottom = position + "%";
 }
 
-function wah() {
-    var move = document.getElementById('animable');
-    var position = window.getComputedStyle(move).getPropertyValue("background-position");
-    document.getElementById("animable").style.backgroundPosition = "0% 0%";
-    var mar = move.style.backgroundPosition;
-    console.log(position);
-    console.log(move);
-
-
-    if (move.style.background-position != "100%") {
-        position += 25;
-    }
+function CheckAnswer(){
+    var answerBar = document.getElementById("correct-answer");
+    var answerImage = document.getElementById("filler-image");
+    var answerText = document.getElementById("correct-text");
     
+    answerBar.style.visibility = 'visible';
+    if(answerImage.src.match("images/Beer.png"))
+    {
+        answerBar.style.top = '38%';
+        answerText.innerHTML = ' Standard Drink: Beer';
+        console.log('beer');
+    }
+    else if(answerImage.src.match("images/Wine.png"))
+    {
+        answerBar.style.top = '73%';
+        answerText.innerHTML = ' Standard Drink: Wine';
+        console.log('wine');
+
+    }
+    else if(answerImage.src.match("images/Malt.png"))
+    {
+        answerBar.style.top = '55%';
+        answerText.innerHTML = ' Standard Drink: Malt Beverage';
+        console.log('malt');
+
+    }
+    else if(answerImage.src.match("images/Liquor.png"))
+    {
+        answerBar.style.top = '91%';
+        answerText.innerHTML = ' Standard Drink: Liquor';
+        console.log('liq');
+
+    }
+    console.log(answerImage);
 }
