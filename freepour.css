@@ -26,14 +26,19 @@
   .drink-select {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1.0fr;
     background-color: rgba(62, 53, 62, 0.6);
-    gap: 0px 15px;
-    padding: 30px 10px 10px 10px;
+    gap: 0px 5px;
+    padding: 10px 5px 5px 5px;
     border-width: 2px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    min-height: 70%;
+    min-width: 80%;
+    max-height: 80%;
     border-style: solid;
-    grid-template-areas:
-      ". . . .";
+    grid-template-areas: ". . . .";
     grid-area: 2 / 2 / 3 / 3;
   }
   
@@ -41,9 +46,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      ". . .";
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 80%;
+    max-height: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    gap: 0px 5px;
+    grid-template-areas: ". . .";
     grid-area: 4 / 2 / 5 / 3;
   }
   
@@ -141,23 +152,33 @@
 .btn-down {
   border: none;
   background: transparent;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(images/ButtonDown.png);
+  background-image: url(images/ArrowDown.svg), url(images/GreenCircleButton.svg);
+  background-position: 50% 50%, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 55%, contain;
   height: 100%;
   width: 100%;
 }
 .btn-up {
   border: none;
   background: transparent;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(images/ButtonUp.png);
+  background-image: url(images/ArrowUp.svg), url(images/GreenCircleButton.svg);
+  background-position: 50% 50%, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 55%, contain;
   height: 100%;
   width: 100%;
-  
+}
+
+.btn-check {
+  border: none;
+  background: transparent;
+  background-image: url(images/QMark.svg), url(images/GreenCircleButton.svg);
+  background-position: 52% 50%, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 40%, contain;
+  height: 100%;
+  width: 100%;
 }
 
 .tooltip {
@@ -212,7 +233,8 @@ p.tooltip-header {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  /**/
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .drink-img:hover{

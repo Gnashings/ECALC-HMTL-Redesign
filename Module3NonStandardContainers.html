@@ -24,8 +24,23 @@
 
             <!-- Modal content -->
             <div class="drink-modal-content" id="drink-modal-content">
-              <span class="drink-modal-close">&times;</span>
-              <img src='image/logo.png' class = 'drink-modal-img'>
+
+                <div class="drink-modal-image-area">
+                    <img src='image/logo.png' class = 'drink-modal-img' id = "drink-modal-img">
+                </div>
+
+                <div class="drink-modal-header">
+                    <span class="drink-modal-close">&times;</span>
+                    <p id = 'drink-modal-header'></p>
+                </div>
+
+                <div class="drink-modal-descriptor">
+                    <p id = 'drink-modal-descriptor'></p>
+                </div>
+
+                <div class="drink-modal-button">
+                    <button onclick="Reveal()"></button>
+                </div>
             </div>
 
         </div>
@@ -35,7 +50,7 @@
             
             <div class = 'drinks' id = 'daiquiri'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id='Daiquiri' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                    <img class = 'drink-img' id='Daiquiri' onclick="PopUpModal(this.id)" src='images/ContainerDaiquiri.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Daiquiri</p>
                         <p class = 'description'>about the drink</p>
@@ -46,7 +61,7 @@
 
             <div class = 'drinks' id = 'martini-traditional'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id='MartiniTraditonal' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                    <img class = 'drink-img' id='Martini-Traditonal' onclick="PopUpModal(this.id)" src='images/ContainerMartini-Traditional.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Martini Traditional</p>
                         <p class = 'description'>about the drink</p>
@@ -57,7 +72,7 @@
 
             <div class = 'drinks' id = 'pina-colada'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id='PinaColada' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                    <img class = 'drink-img' id='Pina-Colada' onclick="PopUpModal(this.id)" src='images/ContainerPinaColada.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Piña Colada</p>
                         <p class = 'description'>about the drink</p>
@@ -68,7 +83,7 @@
 
             <div class = 'drinks' id = 'boot-of-beer'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id='BootOfBeer' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                    <img class = 'drink-img' id='Boot-of-Beer' onclick="PopUpModal(this.id)" src='images/ContainerBootofBeer.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Boot of Beer</p>
                         <p class = 'description'>about the drink</p>
@@ -79,7 +94,7 @@
 
             <div class = 'drinks' id = 'cosmopolitan'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id='Cosmopolitan' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                    <img class = 'drink-img' id='Cosmopolitan' onclick="PopUpModal(this.id)" src='images/ContainerCosmopolitan.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Cosmopolitan</p>
                         <p class = 'description'>about the drink</p>
@@ -90,7 +105,7 @@
 
             <div class = 'drinks' id = 'margarita'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id='Margarita' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                    <img class = 'drink-img' id='Margarita' onclick="PopUpModal(this.id)" src='images/ContainerMargarita.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Margarita</p>
                         <p class = 'description'>about the drink</p>
@@ -101,7 +116,7 @@
 
             <div class = 'drinks' id = 'gin-and-tonic'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id='GinAndTonic' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                    <img class = 'drink-img' id='Gin-and-Tonic' onclick="PopUpModal(this.id)" src='images/ContainerGinTonic.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Gin & Tonic</p>
                         <p class = 'description'>about the drink</p>
@@ -112,7 +127,7 @@
 
             <div class = 'drinks' id = 'manhattan'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id='Manhattan' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                    <img class = 'drink-img' id='Manhattan' onclick="PopUpModal(this.id)" src='images/ContainerManhattan.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Manhattan</p>
                         <p class = 'description'>about the drink</p>
@@ -123,7 +138,7 @@
 
             <div class = 'drinks' id = 'screwdriver'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id='ScrewDriver' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                    <img class = 'drink-img' id='Screwdriver' onclick="PopUpModal(this.id)" src='images/ContainerScrewdriver.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Screwdriver</p>
                         <p class = 'description'>about the drink</p>
@@ -134,7 +149,7 @@
 
             <div class = 'drinks' id = 'mojito'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id=' ' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                    <img class = 'drink-img' id='Mojito' onclick="PopUpModal(this.id)" src='images/ContainerMojito.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Mojito</p>
                         <p class = 'description'>about the drink</p>
@@ -148,7 +163,7 @@
 
                 <div class = 'drinks' id = 'long-island'>
                     <div class="tooltip">
-                        <img class = 'drink-img' id='LongIsland' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                        <img class = 'drink-img' id='Long-Island' onclick="PopUpModal(this.id)" src='images/ContainerLongIsland.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Long Island</p>
                             <p class = 'description'>about the drink</p>
@@ -159,7 +174,7 @@
     
                 <div class = 'drinks' id = 'lemon-drop'>
                     <div class="tooltip">
-                        <img class = 'drink-img' id='LemonDrop' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                        <img class = 'drink-img' id='Lemon-Drop' onclick="PopUpModal(this.id)" src='images/ContainerLemonDrop.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Lemon Drop</p>
                             <p class = 'description'>about the drink</p>
@@ -170,7 +185,7 @@
     
                 <div class = 'drinks' id = 'pitcher-of-beer'>
                     <div class="tooltip">
-                        <img class = 'drink-img' id='PitcherOfBeer' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                        <img class = 'drink-img' id='Pitcher-Of-Beer' onclick="PopUpModal(this.id)" src='images/ContainerPitcherofBeer.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Pitcher of Beer</p>
                             <p class = 'description'>about the drink</p>
@@ -181,7 +196,7 @@
     
                 <div class = 'drinks' id = 'dry-martini'>
                     <div class="tooltip">
-                        <img class = 'drink-img' id='DryMartini' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                        <img class = 'drink-img' id='Dry-Martini' onclick="PopUpModal(this.id)" src='images/ContainerDryMartini.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Dry Martini</p>
                             <p class = 'description'>about the drink</p>
@@ -192,7 +207,7 @@
     
                 <div class = 'drinks' id = 'yard-of-beer'>
                     <div class="tooltip">
-                        <img class = 'drink-img' id='YardOfBeer' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                        <img class = 'drink-img' id='Yard-Of-Beer' onclick="PopUpModal(this.id)" src='images/ContainerYardofBeer.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Yard of Beer</p>
                             <p class = 'description'>about the drink</p>
@@ -203,7 +218,7 @@
     
                 <div class = 'drinks' id = 'vodka-tonic'>
                     <div class="tooltip">
-                        <img class = 'drink-img' id='VodkaTonic' onclick="PopUpModal(this.id)" src='images/OptionA.png'>
+                        <img class = 'drink-img' id='Vodka-Tonic' onclick="PopUpModal(this.id)" src='images/ContainerVodkaTonic.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Vodka Tonic</p>
                             <p class = 'description'>about the drink</p>

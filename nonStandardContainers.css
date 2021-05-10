@@ -4,10 +4,11 @@
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
     padding-top: 20px;
+    margin: 10px;
     background-color: rgba(62, 53, 62, 0.6);
     border-color: black;
     border-style: solid;
-    border-width: 5px;
+    border-width: 2px;
     grid-template-areas:
       ". . . . ."
       ". . . . ."
@@ -31,7 +32,6 @@
     font-weight: lighter;
     color: rgb(180, 16, 16);
   }
-
 
   .tooltip {
     position: relative;
@@ -122,12 +122,21 @@
 
 /* Modal Content */
 .drink-modal-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". drink-modal-header"
+    "drink-modal-image-area drink-modal-descriptor"
+    ". drink-modal-button";
   background-color: #d8d8d8;
   margin: auto;
   padding: 20px;
+  width: 75%;
+  height: 75%;
   border: 1px solid #888;
   border-radius: 15px;
-  width: 30%;
 }
 
 .drink-modal-img {
@@ -148,3 +157,8 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.drink-modal-image-area { grid-area: drink-modal-image-area; }
+.drink-modal-header { grid-area: drink-modal-header; }
+.drink-modal-descriptor { grid-area: drink-modal-descriptor; }
+.drink-modal-button { grid-area: drink-modal-button; }
