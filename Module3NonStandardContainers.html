@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="podium.css">
 <link rel="stylesheet" href="nonStandardContainers.css">
+<link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
 <script src="podium.js"></script>
 
 </head>
@@ -26,7 +27,7 @@
             <div class="drink-modal-content" id="drink-modal-content">
 
                 <div class="drink-modal-image-area">
-                    <img src='image/logo.png' class = 'drink-modal-img' id = "drink-modal-img">
+                    <img src='image/OptionA.png' class = 'drink-modal-img' id = "drink-modal-img">
                 </div>
 
                 <div class="drink-modal-header">
@@ -35,11 +36,19 @@
                 </div>
 
                 <div class="drink-modal-descriptor">
-                    <p id = 'drink-modal-descriptor'></p>
+                    <div class ="drink-modal-descriptor-text">
+                        <p id = 'drink-modal-descriptor'></p>
+                    </div>
+                    <div class ="drink-modal-reveal-image">
+                        <img class = 'drink-modal-image'src="images/BottleLiquor.png">
+                    </div>
+                    <div class ="drink-modal-reveal-answer">
+                        <p id = 'drink-modal-reveal'></p>
+                    </div>
                 </div>
 
-                <div class="drink-modal-button">
-                    <button onclick="Reveal()"></button>
+                <div class="drink-modal-button-area">
+                    <button class = 'drink-modal-button' onclick="Reveal()">Reveal</button>
                 </div>
             </div>
 
@@ -53,7 +62,7 @@
                     <img class = 'drink-img' id='Daiquiri' onclick="PopUpModal(this.id)" src='images/ContainerDaiquiri.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Daiquiri</p>
-                        <p class = 'description'>about the drink</p>
+                        <p class = 'description' id = 'daiquiri-description'>A cocktail made with rum, lime juice, and sugar.</p>
                     </span>
                 </div>
                 <p class = 'drink-name'>Daiquiri</p>
@@ -61,10 +70,10 @@
 
             <div class = 'drinks' id = 'martini-traditional'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id='Martini-Traditonal' onclick="PopUpModal(this.id)" src='images/ContainerMartini-Traditional.png'>
+                    <img class = 'drink-img' id='Martini-Traditional' onclick="PopUpModal(this.id)" src='images/ContainerMartiniTraditional.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Martini Traditional</p>
-                        <p class = 'description'>about the drink</p>
+                        <p class = 'description' id = 'martini-traditional-description'>A cocktail made with gin and vermouth, garnished with an olive.</p>
                     </span>
                 </div>
                 <p class = 'drink-name'>Martini Traditional</p>
@@ -75,7 +84,7 @@
                     <img class = 'drink-img' id='Pina-Colada' onclick="PopUpModal(this.id)" src='images/ContainerPinaColada.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Piña Colada</p>
-                        <p class = 'description'>about the drink</p>
+                        <p class = 'description' id = 'pina-colada-description'>A sweet, rum-based cocktail made with coconuut and pineapple juice.</p>
                     </span>
                 </div>
                 <p class = 'drink-name'>Piña Colada</p>
@@ -86,7 +95,7 @@
                     <img class = 'drink-img' id='Boot-of-Beer' onclick="PopUpModal(this.id)" src='images/ContainerBootofBeer.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Boot of Beer</p>
-                        <p class = 'description'>about the drink</p>
+                        <p class = 'description' id = 'boot-of-beer-description'>Beer in a boot shaped glass. A boot can hold up tot a whole 2 liters/67 ounces of beer!</p>
                     </span>
                 </div>
                 <p class = 'drink-name'>Boot of Beer</p>
@@ -97,7 +106,7 @@
                     <img class = 'drink-img' id='Cosmopolitan' onclick="PopUpModal(this.id)" src='images/ContainerCosmopolitan.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Cosmopolitan</p>
-                        <p class = 'description'>about the drink</p>
+                        <p class = 'description' id = 'cosmopolitan-description'>A cocktail made with vodka, triple sec, cranberry juice and fresh lime juice.</p>
                     </span>
                 </div>
                 <p class = 'drink-name'>Cosmopolitan</p>
@@ -108,7 +117,7 @@
                     <img class = 'drink-img' id='Margarita' onclick="PopUpModal(this.id)" src='images/ContainerMargarita.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Margarita</p>
-                        <p class = 'description'>about the drink</p>
+                        <p class = 'description' id = 'margarita-description'>A cocktail made with tequilla and lime juice. Often served with salt on the rim glass.</p>
                     </span>
                 </div>
                 <p class = 'drink-name'>Margarita</p>
@@ -116,10 +125,10 @@
 
             <div class = 'drinks' id = 'gin-and-tonic'>
                 <div class="tooltip">
-                    <img class = 'drink-img' id='Gin-and-Tonic' onclick="PopUpModal(this.id)" src='images/ContainerGinTonic.png'>
+                    <img class = 'drink-img' id='Gin-and-Tonic' onclick="PopUpModal(this.id)" src='images/ContainerGinandTonic.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Gin & Tonic</p>
-                        <p class = 'description'>about the drink</p>
+                        <p class = 'description' id = 'gin-and-tonic-description'>A cocktail made of gin and tonic water poured over ice.</p>
                     </span>
                 </div>
                 <p class = 'drink-name'>Gin & Tonic</p>
@@ -130,7 +139,7 @@
                     <img class = 'drink-img' id='Manhattan' onclick="PopUpModal(this.id)" src='images/ContainerManhattan.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Manhattan</p>
-                        <p class = 'description'>about the drink</p>
+                        <p class = 'description' id = 'manhattan-description'>A cocktail made of whiskey, sweet vermouth, and bitters.</p>
                     </span>
                 </div>
                 <p class = 'drink-name'>Manhattan</p>
@@ -141,7 +150,7 @@
                     <img class = 'drink-img' id='Screwdriver' onclick="PopUpModal(this.id)" src='images/ContainerScrewdriver.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Screwdriver</p>
-                        <p class = 'description'>about the drink</p>
+                        <p class = 'description' id = 'screwdriver-description'>A drink made with orange juice and vodka.</p>
                     </span>
                 </div>
                 <p class = 'drink-name'>Screwdriver</p>
@@ -152,7 +161,7 @@
                     <img class = 'drink-img' id='Mojito' onclick="PopUpModal(this.id)" src='images/ContainerMojito.png'>
                     <span class="tooltiptext">
                         <p class = 'tooltip-header'>Mojito</p>
-                        <p class = 'description'>about the drink</p>
+                        <p class = 'description' id = 'mojito-description'>A Cuban cocktail made with white rum, sugar, lime juice and sparkling water with mint.</p>
                     </span>
                 </div>
                 <p class = 'drink-name'>Mojito</p>
@@ -166,7 +175,7 @@
                         <img class = 'drink-img' id='Long-Island' onclick="PopUpModal(this.id)" src='images/ContainerLongIsland.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Long Island</p>
-                            <p class = 'description'>about the drink</p>
+                            <p class = 'description' id = 'long-island-description'>A cocktail made primarily with vodka, gin, tequila, and rum.</p>
                         </span>
                     </div>
                     <p class = 'drink-name'>Long Island</p>
@@ -177,7 +186,7 @@
                         <img class = 'drink-img' id='Lemon-Drop' onclick="PopUpModal(this.id)" src='images/ContainerLemonDrop.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Lemon Drop</p>
-                            <p class = 'description'>about the drink</p>
+                            <p class = 'description' id = 'lemon-drop-description'>A lemon-based cocktail with vodka, triple-sec, sugar and fresh lemon juice.</p>
                         </span>
                     </div>
                     <p class = 'drink-name'>Lemon Drop</p>
@@ -188,7 +197,7 @@
                         <img class = 'drink-img' id='Pitcher-Of-Beer' onclick="PopUpModal(this.id)" src='images/ContainerPitcherofBeer.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Pitcher of Beer</p>
-                            <p class = 'description'>about the drink</p>
+                            <p class = 'description' id = 'pitcher-of-beer-description'>A full pitcher of beer.</p>
                         </span>
                     </div>
                     <p class = 'drink-name'>Pitcher of Beer</p>
@@ -199,7 +208,7 @@
                         <img class = 'drink-img' id='Dry-Martini' onclick="PopUpModal(this.id)" src='images/ContainerDryMartini.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Dry Martini</p>
-                            <p class = 'description'>about the drink</p>
+                            <p class = 'description' id = 'dry-martini-description'>A classic martini but with little to no vermouth</p>
                         </span>
                     </div>
                     <p class = 'drink-name'>Dry Martini</p>
@@ -207,10 +216,10 @@
     
                 <div class = 'drinks' id = 'yard-of-beer'>
                     <div class="tooltip">
-                        <img class = 'drink-img' id='Yard-Of-Beer' onclick="PopUpModal(this.id)" src='images/ContainerYardofBeer.png'>
+                        <img class = 'drink-img' id='Yard-of-Beer' onclick="PopUpModal(this.id)" src='images/ContainerYardofBeer.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Yard of Beer</p>
-                            <p class = 'description'>about the drink</p>
+                            <p class = 'description' id = 'yard-of-beer-description'>A tall but thin glass of beer.</p>
                         </span>
                     </div>
                     <p class = 'drink-name'>Yard of Beer</p>
@@ -221,7 +230,7 @@
                         <img class = 'drink-img' id='Vodka-Tonic' onclick="PopUpModal(this.id)" src='images/ContainerVodkaTonic.png'>
                         <span class="tooltiptext">
                             <p class = 'tooltip-header'>Vodka Tonic</p>
-                            <p class = 'description'>about the drink</p>
+                            <p class = 'description' id = 'vodka-tonic-description'>A drink made of vodka and tonic water.</p>
                         </span>
                     </div>
                     <p class = 'drink-name'>Vodka Tonic</p>
