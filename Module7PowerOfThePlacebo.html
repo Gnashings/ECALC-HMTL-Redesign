@@ -3,8 +3,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="podium.css">
+<link rel="stylesheet" href="videoAds.css">
 <script src="podium.js"></script>
-
 </head>
 <body>
 
@@ -18,22 +18,24 @@
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
     </div>
     <div class="whiteboard">
-      <div class="emptybackground">
-        <div class = "content">
-            <div Id='align-center'>
-                <h1>Bar Lab Research</h1>
-                <img src='images/BarLab.png' width = '100%' style='margin-left: auto; margin-right: auto;'>
+        <div class = "orangeBackground">
+            <div id = 'ADInteractive'>
+                <h2 style="color: darkblue;">The Power of the Placebo</h2>
+                <div id= 'ADVideo'>
+                    <video width="640" height="480" controls>
+                      <source src="Videos/ad_3.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
         </div>
-      </div>
     </div>
       <div class="backfwd">
-        <form action="Module7.html"></form>
+        <form action="Module7BarLabResearch.html">
             <input type="submit" value="" class="backbtn" />
             <br>
             Back
         </form>
-        <form action="Module7PowerOfThePlacebo.html">
+        <form action="Module8.html">
             <input type="submit" value="" class="fwdbtn" />
             <br>
             Next
@@ -46,6 +48,6 @@
 <script>
   includeHTML();
 </script>
-
+<script src="becauseWeCan.js"></script>
 </body>
 </html> 
