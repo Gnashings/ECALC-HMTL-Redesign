@@ -5,10 +5,10 @@
 @import url("backgrounds.css");
 
 html{
-  height: 100%;
-
-  background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;
+  /*background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;*/
+  background-color: #222222;
 }
+
 @font-face {
   font-family: 'DKBabySitter';
   src: url('DKBabySitter.ttf');
@@ -25,7 +25,7 @@ body {
   border: 16px solid transparent;
   border-image: url(images/border.png) 16 round;
   margin: 0;
-  height: 100%;
+  min-width: 965px;
 }
 
 .sidenav {
@@ -193,6 +193,7 @@ body {
   grid-template-rows: 0.5fr repeat(3, 2fr) 0.5fr;
   min-height: 100%;
   gap: 0px 0px;
+  background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;
   grid-template-areas:
   "indexnav indexnav . . fullscreen"
   ". whiteboard whiteboard whiteboard ."
@@ -269,6 +270,29 @@ p.removeBlockMargin{
   position: absolute;
   bottom:0;
   left:0;          
+}
+
+.wb-table{
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.workbook{
+  max-width: 75%;
+  margin-left: auto;
+  margin-right:auto;
+  text-align: center;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 500;
+}
+
+.workbook p {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media screen and (max-width: 450px) {
