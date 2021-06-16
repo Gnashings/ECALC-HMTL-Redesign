@@ -14,7 +14,6 @@ html{
   src: url('DKBabySitter.ttf');
 }
 #noborder{
-  height: 100%;
   border: none;
   background: linear-gradient(0deg, grey, white 100%) no-repeat;
 }
@@ -243,11 +242,11 @@ h1{
 .threeRowFlex{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .threeRowFlexChild{
-  padding-left: 10px;
-  padding-right: 10px;
+  width: 28%;
   text-align: center;
 }
 
