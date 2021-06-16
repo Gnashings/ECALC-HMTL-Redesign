@@ -19,11 +19,24 @@
     align-content: center;
     height: 100%;
   }
+
+  .orangeBackground {
+    background: url(images/orangeBackdrop.png) center no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+  }
   
   .paperBackground {
     background: url(images/PaperBackdrop.png) center no-repeat;
     background-size: contain;
     max-width: 925px;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
