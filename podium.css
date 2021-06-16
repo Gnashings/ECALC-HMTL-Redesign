@@ -7,6 +7,7 @@
 html{
   /*background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;*/
   background-color: #222222;
+  min-height: 685px;
 }
 
 @font-face {
@@ -25,6 +26,7 @@ body {
   border-image: url(images/border.png) 16 round;
   margin: 0;
   min-width: 965px;
+  min-height: 685px;
 }
 
 .sidenav {
@@ -189,7 +191,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 0.5fr repeat(3, 2fr) 0.5fr;
-  grid-template-rows: 0.5fr repeat(3, 2fr) 0.5fr;
+  grid-template-rows: 0.5fr repeat(3, 4fr) 0.5fr;
   min-height: 100%;
   gap: 0px 0px;
   background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;
